@@ -23,3 +23,7 @@ variable "environment" {
 variable "zone_name" {
   default = "forpractice.uno"
 }
+
+variable "app_version" {
+  
+}
