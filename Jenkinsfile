@@ -9,8 +9,8 @@ pipeline {
         disableConcurrentBuilds()
     }
     parameters {
-        string(name: 'version', defaultValue: '1.0.0', description: 'What is the version of artifact?')
-        string(name: 'environment', defaultValue: 'dev', description: 'Which environment?')
+        string(name: 'version', defaultValue: '', description: 'What is the version of artifact?')
+        string(name: 'environment', defaultValue: '', description: 'Which environment?')
     }
     // build
     stages {
