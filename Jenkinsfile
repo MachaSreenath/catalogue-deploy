@@ -10,7 +10,7 @@ pipeline {
         ansiColor('xterm')
     }
     parameters {
-        string(name: 'version', defaultValue: '', description: 'What is the version of artifact?')
+        string(name: 'version', defaultValue: '', description: 'version of artifact')
         string(name: 'environment', defaultValue: 'dev', description: 'Which environment?')
     }
     // build
@@ -52,14 +52,14 @@ pipeline {
     // post build
     post { 
         always { 
-            echo 'I will always say Hello again!'
+            echo 'pipeline fails r success i will execute'
             deleteDir()
         }
         failure { 
-            echo 'this runs when pipeline is failed, used generally to send some alerts'
+            echo 'pipeline failed'
         }
         success{
-            echo 'I will say Hello when pipeline is success'
+            echo 'pipeline success'
         }
     }
 }
