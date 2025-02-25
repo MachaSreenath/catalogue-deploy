@@ -29,5 +29,5 @@ variable "app_version" {
 }
 
 variable "iam_instance_profile" {
-  
+  default = "iamroleforec2creation"
 }
