@@ -13,7 +13,6 @@ pipeline {
         string(name: 'version', defaultValue: '', description: 'version of artifact')
         string(name: 'environment', defaultValue: 'dev', description: 'Which environment?')
         booleanParam(name: 'Destroy', defaultValue: 'false', description: 'destroy all')
-        booleanParam(name: 'Create', defaultValue: 'false', description: 'create')
     }
     // build
     stages {
@@ -42,11 +41,6 @@ pipeline {
             }
         }
          stage('apply') {
-            when{
-                expression{
-                    params.Create
-                }
-            }
             steps {
                 sh """
                     cd terraform
